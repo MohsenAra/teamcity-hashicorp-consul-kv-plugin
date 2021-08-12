@@ -1,0 +1,42 @@
+/*
+ * Copyright 2000-2020 JetBrains s.r.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+apply plugin: 'com.github.rodm.teamcity-common'
+
+teamcity {
+    version = teamcity_version
+}
+
+dependencies {
+    
+    compile('com.amazonaws:aws-java-sdk-core:1.11.835') { dep ->
+        ['org.apache.httpcomponents', 'commons-logging'].each{ group -> dep.exclude group: group }
+    }
+    compile('com.fasterxml.jackson.core:jackson-annotations:2.8.0')
+    compile('com.fasterxml.jackson.core:jackson-core:2.8.0')
+    compile('com.fasterxml.jackson.core:jackson-databind:2.8.0')
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.8.0')
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.0')
+    provided "org.springframework:spring-web:$spring_version"
+    provided "org.apache.httpcomponents:httpclient:$httpclient_version"
+
+    testFixturesApi "org.testcontainers:testcontainers:$testcontainers_version"
+    testFixturesApi "org.assertj:assertj-core:$assertj_version"
+    testFixturesApi "org.eclipse.jetty:jetty-server:$jetty_version"
+
+    testFixturesApi "org.jetbrains.teamcity:tests-support:${teamcity_version}"
+    testFixturesApi "org.springframework:spring-web:$spring_version"
+    testFixturesApi "org.apache.httpcomponents:httpclient:$httpclient_version"
+}
