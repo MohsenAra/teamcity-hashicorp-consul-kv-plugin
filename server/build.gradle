@@ -44,11 +44,11 @@ teamcity {
         descriptor {
             name = 'teamcity-consul-kv-support'
             displayName = 'HashiCorp Consul Kv Support'
-            description = 'Provides support for HashiCorp Consul Kv Secrets Manager'
+            description = 'Provides support for HashiCorp Consul Kv Storage'
             version = project.version
 
-            vendorName = 'JetBrains'
-            vendorUrl = 'https://www.jetbrains.com'
+            vendorName = 'MohsenAra'
+            vendorUrl = 'https://github.com/MohsenAra/'
 
             useSeparateClassloader = true
         }
