@@ -28,7 +28,7 @@ buildscript {
 }
 
 ext {
-    version_prefix = '0.1'
+    version_prefix = '0.2'
     teamcity_version = '2018.1'
     // compile
     spring_version = '4.2.9.RELEASE'
@@ -40,7 +40,7 @@ ext {
 }
 
 group = 'org.jetbrains.teamcity.consul.kv'
-version = "${version_prefix}-SNAPSHOT"
+version = "${version_prefix}"
 
 if (System.getenv('BUILD_NUMBER') != null) {
     version = "${System.env.BUILD_NUMBER}"
