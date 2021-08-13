@@ -8,6 +8,7 @@ Defaine Key Value In Hashi Corp Consul
 ![consul_kv-store](https://user-images.githubusercontent.com/5933417/129270490-309c296a-f985-4a2d-8da5-7faaa313fb44.png)
 
 Install Plugin
+![plugin file] (https://github.com/MohsenAra/teamcity-hashicorp-consul-kv-plugin/raw/main/plugin%20file/teamcity-hashicorp-consul-kv-plugin.zip)
 
 Create Connection
 ![connection](https://user-images.githubusercontent.com/5933417/129270802-a4e9ddbe-3ea6-4dde-9a6b-abe0a156541a.png)
